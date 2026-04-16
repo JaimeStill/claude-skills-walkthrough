@@ -34,7 +34,8 @@ This points Claude Code at the repo's `.claude-plugin/marketplace.json` — the 
 
 ### From the CLI
 
-> [!INFO] You can use the `-s` flag to explicitly set the scope of the installed plugin (defaults to `user` scope).
+> [!NOTE]
+> You can use the `-s` flag to explicitly set the scope of the installed plugin (defaults to `user` scope).
 
 ```bash
 claude plugin install dev-workflow@tau-marketplace
@@ -81,7 +82,8 @@ claude plugin marketplace remove tau-marketplace
 
 Skills are designed around progressive context loading. Claude doesn't load everything at once — it loads only what the current task requires.
 
-> [!TIP] You can organize the skill sub-directory hierarchy however you want; this is just the convention that makes the most sense to me in terms of differentiating contextually distinct skill infrastructure.
+> [!TIP]
+> You can organize the skill sub-directory hierarchy however you want; this is just the convention that makes the most sense to me in terms of differentiating contextually distinct skill infrastructure.
 
 ```
 CLAUDE.md              Always loaded. Project entry point.
@@ -514,11 +516,13 @@ The skill follows the same anatomy as any other skill — frontmatter with trigg
 
 System skills turn Claude Code into an interface for your entire environment. Here's a prompt that combines the Omarchy skill's theme knowledge with image generation:
 
-```
-/omarchy
-
-I don't particularly care for the background images that come with the pre-installed themes. For every pre-installed theme, I'd like to replace the default wallpaper with a single solid-color image that uses that theme's own background color as a flat fill. Name the file 0.default.png so it sorts first and becomes the theme's default wallpaper.
-```
+> /omarchy
+>
+> I don't particularly care for the background images that come with the
+> pre-installed themes. For every pre-installed theme, I'd like to replace
+> the default wallpaper with a single solid-color image that uses that
+> theme's own background color as a flat fill. Name the file `0.default.png`
+> so it sorts first and becomes the theme's default wallpaper.
 
 What happens behind the scenes:
 
