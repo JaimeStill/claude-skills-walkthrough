@@ -173,6 +173,10 @@ If a user runs `/dev-workflow task` without the issue number, Claude doesn't fai
 
 This inverts the usual CLI pattern. A traditional tool prints a usage error and exits. A skill treats missing parameters as a conversation — Claude knows what's required, why it's required, and can ask for it with full context about what happens next.
 
+The following screenshot demonstrates executing the `/dev-workflow objective` command without providing the required `<issue-number>` parameter:
+
+![missing-parameter](./assets/missing-parameter.png)
+
 ### Skills as Loose Specification
 
 Writing skills is effectively just a loose means of programming a specification. You're not writing code that executes — you're writing a specification that describes:
